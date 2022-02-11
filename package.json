@@ -20,12 +20,12 @@
     "build": "tsc --build",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
     "lint": "eslint .",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d storybook-static",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "dependencies": {
     "tslib": "^2.3.0"
