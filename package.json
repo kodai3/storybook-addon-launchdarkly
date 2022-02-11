@@ -1,0 +1,58 @@
+{
+  "name": "storybook-addon-launchdarkly",
+  "version": "0.0.1",
+  "description": "Use Launchdarkly in your Storybook stories.",
+  "license": "MIT",
+  "main": "preset.js",
+  "types": "dist/index.d.ts",
+  "author": "kodai3",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "preset.js"
+  ],
+  "storybook": {
+    "displayName": "Launchdarkly",
+    "icon": "https://pbs.twimg.com/profile_images/1440353941447856132/1NSTAyVX_400x400.jpg"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006 -s public",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/addons": "^6.4.18",
+    "@storybook/components": "^6.4.18",
+    "@storybook/react": "^6.4.18",
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "5.9.0",
+    "@typescript-eslint/parser": "5.9.0",
+    "eslint": "8.6.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "^7.0.4",
+    "launchdarkly-react-client-sdk": "^2.25.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "@storybook/addon-actions": "^6.0.0",
+    "@storybook/addons": "^6.0.0",
+    "@storybook/client-api": "^6.0.0",
+    "launchdarkly-react-client-sdk": "^2.25.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  }
+}
