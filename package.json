@@ -1,6 +1,7 @@
 {
   "name": "storybook-addon-launchdarkly",
   "version": "0.0.1",
+  "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly",
   "description": "Use Launchdarkly in your Storybook stories.",
   "license": "MIT",
   "main": "preset.js",
@@ -21,7 +22,10 @@
     "prebuild": "npm run clean",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -39,6 +43,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "launchdarkly-react-client-sdk": "^2.25.0",
     "prettier": "^2.5.1",

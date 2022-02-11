@@ -28,19 +28,7 @@ module.exports = {
 };
 ```
 
-add the following to your `.storybook/preview.js`
-
-```js
-export const parameters = {
-  launchdarkly: {
-    flags: {
-      yourFlag: true,
-    },
-  },
-};
-```
-
-## Writing your stories with queries
+## Writing your stories with flags
 
 ```jsx
 import Example from '.';
@@ -61,3 +49,5 @@ export const Default: StoryObj = {
 ```
 
 ## Example StoryBook
+
+https://kodai3.github.io/storybook-addon-launchdarkly

@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CICD
 on: [push]
 jobs:
   build:
@@ -11,3 +11,4 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn lint
+      - run: yarn deploy
