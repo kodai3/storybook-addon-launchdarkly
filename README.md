@@ -1,4 +1,5 @@
 # Storybook Addon LaunchDarkly
+[![current version](https://img.shields.io/npm/v/storybook-addon-launchdarkly.svg)](https://www.npmjs.com/package/storybook-addon-launchdarkly)
 
 Use LaunchDarkly in your Storybook stories.
 
