@@ -1,7 +1,7 @@
 {
   "name": "storybook-addon-launchdarkly",
   "version": "1.0.0",
-  "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly",
+  "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly#readme",
   "description": "Use Launchdarkly in your Storybook stories.",
   "license": "MIT",
   "main": "preset.js",
@@ -15,6 +15,13 @@
   "storybook": {
     "displayName": "Launchdarkly",
     "icon": "https://pbs.twimg.com/profile_images/1440353941447856132/1NSTAyVX_400x400.jpg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kodai3/storybook-addon-launchdarkly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kodai3/storybook-addon-launchdarkly/issues"
   },
   "scripts": {
     "build": "tsc --build",
