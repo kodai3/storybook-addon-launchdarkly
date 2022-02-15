@@ -25,6 +25,7 @@
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook",
+    "start-storybook": "start-storybook",
     "prepare": "husky install"
   },
   "dependencies": {
