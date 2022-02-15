@@ -7,7 +7,7 @@ export function getTitle(): string {
   const params = useParameter<LDContext>(PARAM_KEY);
 
   if (params?.flags) {
-    return `Launchdarkly (${Object.keys(params?.flags).length})`;
+    return `Launchdarkly (${Object.keys(params.flags).length})`;
   }
 
   return 'Launchdarkly (0)';

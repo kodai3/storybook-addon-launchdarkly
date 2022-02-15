@@ -3,17 +3,16 @@ import { LDContext, Provider } from 'launchdarkly-react-client-sdk/lib/context';
 import { FC } from 'react';
 import { PARAM_KEY } from './constants';
 
+const emptyState: LDContext = {
+  flags: {},
+};
+
 export const withLaunchDarkly = (Story: FC<unknown>) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const value = useParameter<LDContext>(PARAM_KEY);
-
-  if (!value) {
-    console.warn('storybook-addon-launchdarkly: LDContext is missing.');
-    return <Story />;
-  }
+  const params = useParameter<LDContext>(PARAM_KEY);
 
   return (
-    <Provider value={value}>
+    <Provider value={params || emptyState}>
       <Story />
     </Provider>
   );
