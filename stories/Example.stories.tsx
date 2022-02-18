@@ -6,7 +6,7 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof Example>;
 
-export const Blue: StoryObj = {
+export const True: StoryObj = {
   parameters: {
     launchdarkly: {
       flags: {
@@ -16,7 +16,7 @@ export const Blue: StoryObj = {
   },
 };
 
-export const Red: StoryObj = {
+export const False: StoryObj = {
   parameters: {
     launchdarkly: {
       flags: {
