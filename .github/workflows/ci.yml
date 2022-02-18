@@ -10,8 +10,8 @@ jobs:
           node-version: 16.x
       - run: yarn
       - run: yarn lint
-      - run: yarn test
       - run: yarn build
+      - run: yarn test
       - run: yarn build-storybook
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
