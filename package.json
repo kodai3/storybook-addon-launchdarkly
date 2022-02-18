@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-launchdarkly",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly#readme",
   "description": "Use Launchdarkly in your Storybook stories.",
   "license": "MIT",
