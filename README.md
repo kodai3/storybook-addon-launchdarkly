@@ -50,12 +50,13 @@ export const Default: StoryObj = {
 };
 ```
 
-## Writing your test with stories
+## Writing your test with flagged stories
 
 Because composeStory dosen't handdle addons, you need to setup.
-[ref](https://github.com/storybookjs/testing-react/issues/86#issuecomment-1027919112)
+check [this comment](https://github.com/storybookjs/testing-react/issues/86#issuecomment-1027919112) for referrence.
 
 ```js
+// setupFile.js
 import { setGlobalConfig } from '@storybook/testing-react';
 import * as globalConfig from '../.storybook/preview';
 import { decorators } from 'storybook-addon-launchdarkly';
@@ -71,6 +72,7 @@ setGlobalConfig({
 ```
 
 ```tsx
+// Example.test.tsx
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import * as stories from './Example.stories';
