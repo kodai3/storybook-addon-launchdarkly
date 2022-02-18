@@ -1,11 +1,19 @@
 import { useFlags } from 'launchdarkly-react-client-sdk';
 
+const commonStyles = {
+  color: 'white',
+  width: 300,
+  height: 300,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
 export const Example = () => {
   const { testFlag } = useFlags();
-
   return testFlag ? (
-    <div style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
+    <div style={{ backgroundColor: 'blue', ...commonStyles }}>True</div>
   ) : (
-    <div style={{ width: 300, height: 300, backgroundColor: 'red' }} />
+    <div style={{ backgroundColor: 'red', ...commonStyles }}>False</div>
   );
 };
