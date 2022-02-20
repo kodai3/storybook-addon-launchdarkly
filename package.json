@@ -12,6 +12,11 @@
     "README.md",
     "preset.js"
   ],
+  "keywords": [
+    "storybook",
+    "addon",
+    "launchdarkly"
+  ],
   "storybook": {
     "displayName": "Launchdarkly",
     "icon": "https://pbs.twimg.com/profile_images/1440353941447856132/1NSTAyVX_400x400.jpg"
