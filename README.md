@@ -59,7 +59,7 @@ check [this comment](https://github.com/storybookjs/testing-react/issues/86#issu
 // setupFile.js
 import { setGlobalConfig } from '@storybook/testing-react';
 import * as globalConfig from '../.storybook/preview';
-import { decorators } from 'storybook-addon-launchdarkly/dist';
+import { decorators } from 'storybook-addon-launchdarkly/dist/esm';
 
 setGlobalConfig({
   ...globalConfig,
