@@ -1,1 +1,1 @@
-export { decorators } from './preset/addDecorator';
+export { decorators } from './preset/preview';

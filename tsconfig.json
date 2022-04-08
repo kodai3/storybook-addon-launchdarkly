@@ -1,37 +1,21 @@
 {
     "compilerOptions": {
-    "alwaysStrict": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "jsx": "react-jsx",
-    "lib": [
-        "DOM",
-        "ESNext"
-    ],
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "dist",
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "ES5"
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "emitDecoratorMetadata": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "incremental": false,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "lib": ["es2017", "dom"],
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "rootDir": "./src",
+      "skipLibCheck": true,
+      "target": "es5",
     },
-    "exclude": [
-        "dist",
-        "node_modules"
-    ],
     "include": [
-        "src"
-    ]
-}
+      "src/**/*"
+    ],
+  }

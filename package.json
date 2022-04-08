@@ -1,16 +1,18 @@
 {
   "name": "storybook-addon-launchdarkly",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly#readme",
   "description": "Use Launchdarkly in your Storybook stories.",
   "license": "MIT",
-  "main": "preset.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/ts/index.d.ts",
   "author": "kodai3",
   "files": [
     "dist/**/*",
     "README.md",
-    "preset.js"
+    "*.js",
+    "*.d.ts"
   ],
   "keywords": [
     "storybook",
@@ -29,9 +31,14 @@
     "url": "https://github.com/kodai3/storybook-addon-launchdarkly/issues"
   },
   "scripts": {
-    "build": "tsc --build",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
+    "clean": "rimraf ./dist",
+    "buildBabel": "concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
+    "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx,.ts,.tsx\"",
+    "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\"",
+    "buildTsc": "tsc --declaration --emitDeclarationOnly --outDir ./dist/ts",
+    "prebuild": "yarn clean",
+    "build": "concurrently \"yarn buildBabel\" \"yarn buildTsc\"",
+    "build:watch": "concurrently \"yarn buildBabel:esm -- --watch\" \"yarn buildTsc -- --watch\"",
     "test": "NODE_ENV=test jest --config ./jest.config.js --setupFiles ./setupFiles.js",
     "storybook": "start-storybook -p 6006 -s public",
     "lint": "eslint .",
@@ -45,8 +52,11 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
     "@storybook/addons": "^6.4.18",
@@ -60,6 +70,8 @@
     "@typescript-eslint/eslint-plugin": "5.9.0",
     "@typescript-eslint/parser": "5.9.0",
     "babel-jest": "^27.5.1",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^7.1.0",
     "eslint": "8.6.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "7.28.0",

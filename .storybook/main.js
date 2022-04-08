@@ -1,5 +1,5 @@
 module.exports = {
   stories: ['../**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['../dist/preset'],
+  addons: ['../preset.js'],
   framework: '@storybook/react',
 };
