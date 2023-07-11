@@ -1,12 +1,13 @@
-import { ComponentMeta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
+import { ComponentType } from 'react';
 import { Example } from './Example';
 
-export default {
+const meta: Meta<ComponentType<typeof Example>> = {
   component: Example,
-  argTypes: {},
-} as ComponentMeta<typeof Example>;
+}
+export default meta
 
-export const True: StoryObj = {
+export const True: StoryObj<typeof meta> = {
   parameters: {
     launchdarkly: {
       flags: {
@@ -16,7 +17,7 @@ export const True: StoryObj = {
   },
 };
 
-export const False: StoryObj = {
+export const False: StoryObj<typeof meta> = {
   parameters: {
     launchdarkly: {
       flags: {

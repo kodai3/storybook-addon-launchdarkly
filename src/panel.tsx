@@ -1,10 +1,5 @@
 import { useParameter } from '@storybook/api';
-import {
-  Link,
-  Placeholder,
-  ResetWrapper,
-  TableWrapper,
-} from '@storybook/components';
+import { Link, Placeholder, ResetWrapper, Table } from '@storybook/components';
 import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
 import { FC } from 'react';
 import { PARAM_KEY } from './constants';
@@ -26,9 +21,10 @@ export const Panel: FC = () => {
       </Placeholder>
     );
 
+  // TODO: refine table UI
   return (
     <ResetWrapper>
-      <TableWrapper className="docblock-argstable">
+      <Table className="docblock-argstable" style={{ width: '100%' }}>
         <thead className="docblock-argstable-head">
           <tr key="head">
             <th key="name">
@@ -52,7 +48,7 @@ export const Panel: FC = () => {
             </tr>
           ))}
         </tbody>
-      </TableWrapper>
+      </Table>
     </ResetWrapper>
   );
 };
