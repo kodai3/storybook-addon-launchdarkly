@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  testEnvironment: 'jsdom',
+  testEnvironment: "jest-environment-jsdom",
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest',
