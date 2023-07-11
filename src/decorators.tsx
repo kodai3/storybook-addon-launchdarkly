@@ -1,10 +1,14 @@
-import { StoryContext } from '@storybook/addons';
-import { LDContext, Provider } from 'launchdarkly-react-client-sdk/lib/context';
+import type { StoryContext } from '@storybook/addons';
+import {
+  Provider,
+  type ReactSdkContext,
+} from 'launchdarkly-react-client-sdk/lib/context';
 import { FC } from 'react';
 import { PARAM_KEY } from './constants';
 
-const emptyState: LDContext = {
+const emptyState: ReactSdkContext = {
   flags: {},
+  flagKeyMap: {},
 };
 
 export const withLaunchDarkly = (Story: FC<unknown>, context: StoryContext) => {

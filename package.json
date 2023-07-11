@@ -68,7 +68,7 @@
     "husky": "^8.0.3",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
-    "launchdarkly-react-client-sdk": "^2.25.0",
+    "launchdarkly-react-client-sdk": "^3.0.6",
     "prettier": "^3.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -80,7 +80,7 @@
     "@storybook/addon-actions": "^6.0.0",
     "@storybook/addons": "^6.0.0",
     "@storybook/client-api": "^6.0.0",
-    "launchdarkly-react-client-sdk": "^2.25.0",
+    "launchdarkly-react-client-sdk": "^3.0.0",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   }

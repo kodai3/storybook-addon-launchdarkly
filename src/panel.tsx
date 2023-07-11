@@ -5,12 +5,12 @@ import {
   ResetWrapper,
   TableWrapper,
 } from '@storybook/components';
-import { LDContext } from 'launchdarkly-react-client-sdk/lib/context';
+import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
 import { FC } from 'react';
 import { PARAM_KEY } from './constants';
 
 export const Panel: FC = () => {
-  const params = useParameter<LDContext>(PARAM_KEY);
+  const params = useParameter<ReactSdkContext>(PARAM_KEY);
 
   if (typeof params?.flags !== 'object')
     return (
