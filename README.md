@@ -41,7 +41,7 @@ module.exports = {
 ```jsx
 import Example from '.';
 
-const meta: Meta<typeof Exapmle> default {
+const meta: Meta<typeof Exapmle> = {
   component: Example,
 };
 export default meta;
