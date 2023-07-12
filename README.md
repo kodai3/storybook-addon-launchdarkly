@@ -8,7 +8,7 @@ Use LaunchDarkly in your Storybook stories.
 This is not official storybook addon.
 I made this because LD won't for years https://github.com/launchdarkly/react-client-sdk/issues/30.
 
-I can't actively handle the issues which is not in my usecase. (and wou't because LD should do officially)
+I can't actively handle the issues which is not in my usecase. (and won't because LD should do officially.)
 
 ## Install
 
