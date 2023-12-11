@@ -87,7 +87,7 @@
     "@storybook/components": "^7.0.0",
     "@storybook/manager-api": "^7.0.0",
     "@storybook/types": "^7.0.0",
-    "launchdarkly-react-client-sdk": "^3.0.0",
+    "launchdarkly-react-client-sdk": ">=3.0.0 <3.0.7",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }
