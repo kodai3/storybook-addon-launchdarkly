@@ -1,4 +1,4 @@
-import { useParameter } from '@storybook/api';
+import { useParameter } from '@storybook/manager-api';
 import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
 import { PARAM_KEY } from './constants';
 
