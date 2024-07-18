@@ -1,4 +1,4 @@
-import { useParameter } from '@storybook/api';
+import { useParameter } from '@storybook/manager-api';
 import { Link, Placeholder, ResetWrapper, Table } from '@storybook/components';
 import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
 import { FC } from 'react';
