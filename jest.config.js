@@ -7,5 +7,4 @@ module.exports = {
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['**/*.test.ts', '**/*.test.tsx'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 };
