@@ -1,4 +1,4 @@
-export function config(entry: unknown[] = []): unknown[] {
+export function previewAnnotations(entry: unknown[] = []): unknown[] {
   return [...entry, require.resolve('./addDecorator')];
 }
 

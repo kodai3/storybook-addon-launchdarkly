@@ -7,9 +7,9 @@ import { getTitle } from './title';
 addons.register(ADDON_ID, (api) => {
   addons.add(ADDON_ID, {
     paramKey: PARAM_KEY,
-    render({ active = false, key }) {
+    render({ active = false }) {
       return (
-        <AddonPanel key={key} active={active}>
+        <AddonPanel active={active}>
           {!active || !api.getCurrentStoryData() ? null : <Panel />}
         </AddonPanel>
       );
