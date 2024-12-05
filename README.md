@@ -64,11 +64,11 @@ check [this comment](https://github.com/storybookjs/testing-react/issues/86#issu
 
 ```js
 // setupFile.js
-import { setGlobalConfig } from '@storybook/testing-react';
-import * as globalConfig from '../.storybook/preview';
+import { setProjectAnnotations } from '@storybook/react';
+import globalConfig from '../.storybook/preview';
 import { decorators } from 'storybook-addon-launchdarkly/dist';
 
-setGlobalConfig({
+setProjectAnnotations({
   ...globalConfig,
   decorators: [
     ...globalConfig.decorators,
@@ -80,7 +80,7 @@ setGlobalConfig({
 
 ```tsx
 // Example.test.tsx
-import { composeStories } from '@storybook/testing-react';
+import { composeStories } from '@storybook/react';
 import { render, screen } from '@testing-library/react';
 import * as stories from './Example.stories';
 
