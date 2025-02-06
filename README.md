@@ -42,12 +42,12 @@ module.exports = {
 ```jsx
 import Example from '.';
 
-const meta: Meta<typeof Exapmle> = {
+const meta = {
   component: Example,
-};
+} satisfies Meta<typeof Example>;
 export default meta;
 
-export const Default: StoryObj = {
+export const Default: StoryObj<typeof meta> = {
   parameters: {
     launchdarkly: {
       flags: {
@@ -67,14 +67,14 @@ check [this comment](https://github.com/storybookjs/testing-react/issues/86#issu
 // setupFile.js
 import { setProjectAnnotations } from '@storybook/react';
 import globalConfig from '../.storybook/preview';
-import { decorators } from 'storybook-addon-launchdarkly/dist';
+import addonLaunchdarklyConfig from 'storybook-addon-launchdarkly/preview';
 
 setProjectAnnotations({
   ...globalConfig,
   decorators: [
     ...globalConfig.decorators,
     // not loaded automatically in preset, must add this manually for @storybook/testing-react to pick it up
-    ...decorators,
+    ...addonLaunchdarklyConfig.decorators,
   ],
 });
 ```
