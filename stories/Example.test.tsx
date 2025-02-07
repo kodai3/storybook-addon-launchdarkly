@@ -1,19 +1,19 @@
 import { composeStories } from '@storybook/react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import * as stories from './Example.stories';
 
-describe('Example', () => {
-  const { True, False } = composeStories(stories);
+const { True, False } = composeStories(stories);
 
+describe('Example', () => {
   test('flag shoud be True', async () => {
-    render(<True {...True.args} />);
+    await True.run();
 
     expect(screen.queryByText('True')).not.toBeNull();
     expect(screen.queryByText('False')).toBeNull();
   });
 
   test('flag shoud be False', async () => {
-    render(<False {...False.args} />);
+    await False.run();
 
     expect(screen.queryByText('True')).toBeNull();
     expect(screen.queryByText('False')).not.toBeNull();

@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { ComponentType } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Example } from './Example';
 
-const meta: Meta<ComponentType<typeof Example>> = {
+const meta = {
   component: Example,
-}
-export default meta
+} satisfies Meta<typeof Example>;
+
+export default meta;
 
 export const True: StoryObj<typeof meta> = {
   parameters: {

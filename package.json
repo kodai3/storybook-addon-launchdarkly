@@ -4,13 +4,17 @@
   "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly#readme",
   "description": "Use Launchdarkly in your Storybook stories.",
   "license": "MIT",
-  "main": "preset.js",
-  "types": "dist/index.d.ts",
   "author": "kodai3",
+  "exports": {
+    "./preview": "./dist/preview.js",
+    "./manager": "./dist/manager.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist/**/*",
     "README.md",
-    "preset.js"
+    "manager.js",
+    "preview.js"
   ],
   "keywords": [
     "storybook",
@@ -32,7 +36,7 @@
     "build": "tsc --build",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "test": "NODE_ENV=test jest --config ./jest.config.js --setupFiles ./setupFiles.js",
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" NODE_ENV=test jest --config ./jest.config.js",
     "storybook": "storybook dev -p 6006",
     "lint": "eslint .",
     "predeploy": "npm run build-storybook",
@@ -45,21 +49,22 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.2.7",
-    "@storybook/addon-links": "^8.2.7",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/blocks": "^8.2.7",
-    "@storybook/components": "^8.2.7",
-    "@storybook/manager-api": "^8.2.7",
-    "@storybook/react": "^8.2.7",
-    "@storybook/react-webpack5": "^8.2.7",
-    "@storybook/types": "^8.2.7",
-    "@swc/core": "^1.7.5",
-    "@swc/jest": "^0.2.36",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-links": "^8.5.3",
+    "@storybook/addon-webpack5-compiler-swc": "^2.0.0",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/components": "^8.5.3",
+    "@storybook/manager-api": "^8.5.3",
+    "@storybook/react": "^8.5.3",
+    "@storybook/react-webpack5": "^8.5.3",
+    "@storybook/test": "^8.5.3",
+    "@storybook/types": "^8.5.3",
+    "@swc/core": "^1.10.14",
+    "@swc/jest": "^0.2.37",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/jest": "^29.5.12",
-    "@types/react": "^18.2.14",
+    "@types/react": "^19.0.8",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.44.0",
@@ -72,18 +77,18 @@
     "jest-environment-jsdom": "^29.6.1",
     "launchdarkly-react-client-sdk": "^3.0.6",
     "prettier": "^3.0.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rimraf": "^5.0.1",
-    "storybook": "^8.2.7",
-    "typescript": "^4.5.5"
+    "storybook": "^8.5.3",
+    "typescript": "5.1.6"
   },
   "peerDependencies": {
     "@storybook/components": "^8.0.0",
     "@storybook/manager-api": "^8.0.0",
     "@storybook/types": "^8.0.0",
     "launchdarkly-react-client-sdk": ">=3.0.0 <3.0.7",
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
   }
 }

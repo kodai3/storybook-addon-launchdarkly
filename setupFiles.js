@@ -1,8 +1,9 @@
+import '@testing-library/jest-dom'
 import { setProjectAnnotations } from '@storybook/react';
 import globalStorybookConfig from './.storybook/preview';
-import { decorators } from './dist';
+import preview from './dist/preview';
 
 setProjectAnnotations({
   ...globalStorybookConfig,
-  decorators: [...decorators],
+  decorators: [...preview.decorators],
 });
