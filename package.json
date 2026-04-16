@@ -36,11 +36,11 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "rimraf dist",
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "test": "vitest run",
     "storybook": "storybook dev -p 6006",
     "lint": "eslint .",
-    "predeploy": "npm run build-storybook",
+    "predeploy": "pnpm run build-storybook",
     "deploy": "gh-pages -d storybook-static",
     "build-storybook": "storybook build",
     "start-storybook": "storybook dev",

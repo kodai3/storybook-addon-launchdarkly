@@ -13,6 +13,12 @@ I can't actively handle the issues which is not in my usecase. and won't because
 
 ## Install
 
+**pnpm**
+
+```
+pnpm add -D storybook-addon-launchdarkly
+```
+
 **yarn**
 
 ```
