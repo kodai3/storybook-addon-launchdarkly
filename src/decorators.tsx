@@ -1,10 +1,10 @@
 import React, { type ReactNode } from 'react';
-import type { DecoratorFunction, Renderer } from '@storybook/types';
+import type { DecoratorFunction, Renderer } from 'storybook/internal/types';
 import {
   Provider,
   type ReactSdkContext,
-} from 'launchdarkly-react-client-sdk/lib/context';
-import { PARAM_KEY } from './constants';
+} from 'launchdarkly-react-client-sdk/lib/context.js';
+import { PARAM_KEY } from './constants.js';
 
 const emptyState: ReactSdkContext = {
   flags: {},
