@@ -1,6 +1,6 @@
-import { useParameter } from '@storybook/manager-api';
-import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
-import { PARAM_KEY } from './constants';
+import { useParameter } from 'storybook/manager-api';
+import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context.js';
+import { PARAM_KEY } from './constants.js';
 
 export function getTitle(): string {
   // eslint-disable-next-line react-hooks/rules-of-hooks

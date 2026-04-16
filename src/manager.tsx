@@ -1,9 +1,9 @@
 import React from 'react';
-import { AddonPanel } from '@storybook/components';
-import { addons, types } from '@storybook/manager-api';
-import { ADDON_ID, PARAM_KEY } from './constants';
-import { Panel } from './panel';
-import { getTitle } from './title';
+import { AddonPanel } from 'storybook/internal/components';
+import { addons, types } from 'storybook/manager-api';
+import { ADDON_ID, PARAM_KEY } from './constants.js';
+import { Panel } from './panel.js';
+import { getTitle } from './title.js';
 
 addons.register(ADDON_ID, (api) => {
   addons.add(ADDON_ID, {
@@ -11,7 +11,7 @@ addons.register(ADDON_ID, (api) => {
     render({ active = false }) {
       return (
         <AddonPanel active={active}>
-          {!active || !api.getCurrentStoryData() ? null : <Panel />}
+          <>{active && api.getCurrentStoryData() ? <Panel /> : null}</>
         </AddonPanel>
       );
     },

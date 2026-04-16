@@ -1,9 +1,9 @@
 import React from 'react';
-import { useParameter } from '@storybook/manager-api';
-import { Link, Placeholder, ResetWrapper, Table } from '@storybook/components';
-import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context';
+import { useParameter } from 'storybook/manager-api';
+import { Link, Placeholder, ResetWrapper, Table } from 'storybook/internal/components';
+import type { ReactSdkContext } from 'launchdarkly-react-client-sdk/lib/context.js';
 import { FC } from 'react';
-import { PARAM_KEY } from './constants';
+import { PARAM_KEY } from './constants.js';
 
 export const Panel: FC = () => {
   const params = useParameter<ReactSdkContext>(PARAM_KEY);
