@@ -4,6 +4,7 @@
   "homepage": "https://github.com/kodai3/storybook-addon-launchdarkly#readme",
   "description": "Use Launchdarkly in your Storybook stories.",
   "type": "module",
+  "packageManager": "pnpm@10.19.0",
   "license": "MIT",
   "author": "kodai3",
   "exports": {
